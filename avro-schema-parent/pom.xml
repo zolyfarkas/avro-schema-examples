@@ -27,7 +27,7 @@
   <description>Avro schema project parent</description>
   <properties>
     <spf4j.version>8.5.6-SNAPSHOT</spf4j.version>
-    <avro.version>1.8.1.4p-SNAPSHOT</avro.version>
+    <avro.version>1.8.1.4p</avro.version>
   </properties>
   <distributionManagement>
         <repository>
