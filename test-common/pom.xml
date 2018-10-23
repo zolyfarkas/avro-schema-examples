@@ -28,8 +28,12 @@
   <parent>
     <groupId>org.spf4j.avro</groupId>
     <artifactId>avro-schema-parent</artifactId>
-    <version>1.0</version>
+    <version>1.2</version>
   </parent>
+
+  <properties>
+        <scm.url>https://github.com/zolyfarkas/avro-schema-examples</scm.url>
+  </properties>
    
 
 </project>
