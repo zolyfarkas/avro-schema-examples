@@ -22,7 +22,7 @@
   <groupId>org.spf4j.avro.examples</groupId>
   <artifactId>test-schema-common</artifactId>
   <packaging>jar</packaging>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   <name>${project.artifactId}-${project.version}</name>
   <description>An example schema project</description>
   <parent>
@@ -39,7 +39,7 @@
     <connection>${scm.connection}</connection>
     <developerConnection>${scm.connection}</developerConnection>
     <url>${scm.url}</url>
-    <tag>test-schema-common-1.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
 </project>
