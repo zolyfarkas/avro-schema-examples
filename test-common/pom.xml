@@ -34,6 +34,12 @@
   <properties>
         <scm.url>https://github.com/zolyfarkas/avro-schema-examples</scm.url>
   </properties>
-   
+
+  <scm>
+    <connection>${scm.connection}</connection>
+    <developerConnection>${scm.connection}</developerConnection>
+    <url>${scm.url}</url>
+    <tag>HEAD</tag>
+  </scm>
 
 </project>
