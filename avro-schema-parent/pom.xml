@@ -28,17 +28,24 @@
   <properties>
     <spf4j.version>8.5.6</spf4j.version>
     <avro.version>1.8.1.5p</avro.version>
+    <bintray.subject>zolyfarkas</bintray.subject>
+    <bintray.repo>core</bintray.repo>
+    <bintray.package>avro</bintray.package>
   </properties>
   <distributionManagement>
         <repository>
             <id>bintray-zolyfarkas-core</id>
             <url>https://api.bintray.com/maven/${bintray.subject}/${bintray.repo}/${bintray.package}/;publish=1</url>
         </repository>
-        <snapshotRepository>
-            <id>bintray-zolyfarkas-core-snapshot</id>
-            <url>https://api.bintray.com/maven/${bintray.subject}/${bintray.snapshot-repo}/${bintray.package}/;publish=1</url>
-        </snapshotRepository>
-  </distributionManagement>  
+  </distributionManagement>
+
+  <scm>
+    <connection>scm:git:https://github.com/zolyfarkas/avro-schema-examples.git</connection>
+    <developerConnection>scm:git:https://github.com/zolyfarkas/avro-schema-examples.git</developerConnection>
+    <url>https://github.com/zolyfarkas/avro-schema-examples/</url>
+    <tag>HEAD</tag>
+  </scm>
+
   <build>
     <plugins>
       <plugin>
