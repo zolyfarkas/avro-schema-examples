@@ -31,6 +31,8 @@
     <bintray.subject>zolyfarkas</bintray.subject>
     <bintray.repo>core</bintray.repo>
     <bintray.package>avro</bintray.package>
+    <scm.url>https://github.com/zolyfarkas/avro-schema-examples</scm.url>
+    <scm.connection>scm:git:${scm.url}.git</scm.connection>
   </properties>
   <distributionManagement>
         <repository>
@@ -40,9 +42,9 @@
   </distributionManagement>
 
   <scm>
-    <connection>scm:git:https://github.com/zolyfarkas/avro-schema-examples.git</connection>
-    <developerConnection>scm:git:https://github.com/zolyfarkas/avro-schema-examples.git</developerConnection>
-    <url>https://github.com/zolyfarkas/avro-schema-examples/</url>
+    <connection>${scm.connection}</connection>
+    <developerConnection>${scm.connection}</developerConnection>
+    <url>${scm.url}</url>
     <tag>HEAD</tag>
   </scm>
 
