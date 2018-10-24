@@ -33,6 +33,7 @@
     <bintray.package>avro</bintray.package>
     <scm.url>https://github.com/zolyfarkas/avro-schema-examples</scm.url>
     <scm.connection>scm:git:${scm.url}.git</scm.connection>
+    <skip.avrodoc>false</skip.avrodoc>
   </properties>
   <distributionManagement>
         <repository>
@@ -40,6 +41,17 @@
             <url>https://api.bintray.com/maven/${bintray.subject}/${bintray.repo}/${bintray.package}/;publish=1</url>
         </repository>
   </distributionManagement>
+
+  <profiles>
+    <profile>
+      <activation>
+        <file><exists>parent.marker</exists></file>
+      </activation>
+      <properties>
+          <skip.avrodoc>true</skip.avrodoc>
+      </properties>
+    </profile>
+  </profiles>
 
   <scm>
     <connection>${scm.connection}</connection>
@@ -71,6 +83,109 @@
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
         <version>2.5.3</version>
+      </plugin>
+      <plugin>
+        <groupId>com.github.eirslett</groupId>
+        <artifactId>frontend-maven-plugin</artifactId>
+        <version>1.6</version>
+        <!-- executions go here -->
+        <executions>
+          <execution>
+            <id>install node and npm</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>install-node-and-npm</goal>
+            </goals>
+            <configuration>
+              <nodeVersion>v4.4.4</nodeVersion>
+              <npmVersion>2.15.1</npmVersion>
+            </configuration>
+          </execution>
+          <execution>
+            <id>install AVRODOC</id>
+            <phase>initialize</phase>
+            <goals>
+              <goal>npm</goal>
+            </goals>
+            <configuration>
+              <arguments>install avrodoc -g</arguments>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <skip>${skip.avrodoc}</skip>
+          <installDirectory>${project.basedir}/target</installDirectory>
+        </configuration>
+      </plugin>
+      <!-- Generate avrodoc archive -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-antrun-plugin</artifactId>
+        <version>1.8</version>
+        <executions>
+          <execution>
+            <id>generate avrodoc for all schemas</id>
+            <phase>process-classes</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <skip>${skip.avrodoc}</skip>
+              <target>
+                <fileset id="fileset" dir="${project.basedir}/target/generated-sources/avsc">
+                  <include name="**/*.avsc" />
+                </fileset>
+                <pathconvert refid="fileset" property="converted" pathsep=" ">
+                  <globmapper from="${project.basedir}/target/generated-sources/avsc/*" to="*" />
+                </pathconvert>
+                <exec executable="${project.basedir}/target/node/node" dir="${project.basedir}/target/generated-sources/avsc">
+                  <arg value="${project.basedir}/target/lib/node_modules/avrodoc/bin/avrodoc" />
+                  <arg line="${converted}" />
+                  <arg value="-o${project.basedir}/target/avrodoc.html" />
+                </exec>
+                <zip destfile="${project.basedir}/target/avrodoc.jar">
+                  <fileset dir="${project.basedir}/target" includes="avrodoc.html"/>
+                </zip>
+              </target>
+            </configuration>
+          </execution>
+          <execution>
+            <phase>site</phase>
+            <goals>
+              <goal>run</goal>
+            </goals>
+            <configuration>
+              <target>
+                <mkdir dir="target/site" />
+                <copy file="target/avrodoc.html" todir="target/site" />
+              </target>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>3.0.0</version>
+        <executions>
+          <execution>
+            <id>attach-avrodoc</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>attach-artifact</goal>
+            </goals>
+            <configuration>
+              <skipAttach>${skip.avrodoc}</skipAttach>
+               <artifacts>
+                  <artifact>
+                      <file>${project.basedir}/target/avrodoc.jar</file>
+                      <type>jar</type>
+                      <classifier>avrodoc</classifier>
+                  </artifact>
+               </artifacts>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
