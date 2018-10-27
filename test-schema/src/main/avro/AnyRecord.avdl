@@ -1,0 +1,13 @@
+@namespace("org.apache.avro.logicalTypes")
+protocol Any {
+
+    /** Any Avro object */
+    @logicalType("any_record")
+    record AnyRecord {
+      /** avro schema */
+      bytes avroSchema = "";
+      /** version from manifest  */
+      bytes payload = "";
+    }
+ 
+}

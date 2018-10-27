@@ -5,6 +5,15 @@ protocol Core {
 
     import idl "common_local.avdl";
 
+
+   /** record representing a jar archive info */
+    record TestRecord {
+      /** some key value for test*/
+      LocalKeyValue kv = {"key" : "la", "value" : null};
+      /**  some key values */
+      array<KeyValue> values = [];
+    }
+
    /** record representing a jar archive info */
     record JPackageInfo {
       /** the package url */
@@ -12,8 +21,6 @@ protocol Core {
       /** version from manifest  */
       string version = "";
 
-      /** some key value for test*/
-      LocalKeyValue kv = {"key" : "la", "value" : null};
     }
 
     /** a location in a file */
@@ -48,8 +55,6 @@ protocol Core {
       union {null, JThrowable} cause = null;
       /** suppressed exceptions */
       array<JThrowable> suppressed = [];
-      /**  some key values */
-      array<KeyValue> values = [];
     }
 
 }
