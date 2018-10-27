@@ -27,7 +27,7 @@
   <description>Avro schema project parent</description>
   <properties>
     <spf4j.version>8.5.6</spf4j.version>
-    <avro.version>1.8.1.5p</avro.version>
+    <avro.version>1.8.1.6p</avro.version>
     <bintray.subject>zolyfarkas</bintray.subject>
     <bintray.repo>core</bintray.repo>
     <bintray.package>${project.artifactId}</bintray.package>
