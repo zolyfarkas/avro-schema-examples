@@ -2,6 +2,7 @@
 protocol Common {
 
     /** record representing a key value pair */
+    @Immutable
     record KeyValue {
       /** the key */
       string key;
