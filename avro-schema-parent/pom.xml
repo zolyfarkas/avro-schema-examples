@@ -30,7 +30,7 @@
     <avro.version>1.8.1.5p</avro.version>
     <bintray.subject>zolyfarkas</bintray.subject>
     <bintray.repo>core</bintray.repo>
-    <bintray.package>avro</bintray.package>
+    <bintray.package>${project.artifactId}</bintray.package>
     <scm.url>https://github.com/zolyfarkas/avro-schema-examples</scm.url>
     <scm.connection>scm:git:${scm.url}.git</scm.connection>
     <skip.avrodoc>false</skip.avrodoc>
