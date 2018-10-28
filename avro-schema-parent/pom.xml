@@ -40,6 +40,31 @@
     <npm.registryUrl />
     <avro.allowUndefinedLogicalTypes>false</avro.allowUndefinedLogicalTypes>
   </properties>
+
+    <url>${scm.url}</url>
+    <organization>
+      <name>SPF4J</name>
+      <url>http://www.spf4j.org</url>
+    </organization>
+    
+    <licenses>
+        <license>
+            <name>GNU Library or Lesser General Public License (LGPL) 3.0</name>
+            <url>http://www.gnu.org/licenses/lgpl-3.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+        <license>
+            <name>GNU Library or Lesser General Public License (LGPL) 2.1</name>
+            <url>http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html</url>
+            <distribution>repo</distribution>
+        </license>
+        <license>
+          <name>The Apache Software License, Version 2.0</name>
+          <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+          <distribution>repo</distribution>
+        </license>
+    </licenses>
+
   <distributionManagement>
         <repository>
             <id>bintray-zolyfarkas-core</id>
@@ -89,6 +114,30 @@
             <version>${avro.version}</version>
           </dependency>
         </dependencies>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <archive>
+            <manifest>
+              <addDefaultSpecificationEntries>true</addDefaultSpecificationEntries>
+            </manifest>
+            <manifestEntries>
+              <Implementation-Vendor>${project.groupId}</Implementation-Vendor>
+              <Implementation-Vendor-Id>${project.groupId}</Implementation-Vendor-Id>
+              <Implementation-Title>${project.artifactId}</Implementation-Title>
+              <Implementation-Version>${project.version}</Implementation-Version>
+              <Implementation-Description>${project.description}</Implementation-Description>
+              <Implementation-Url>${project.url}</Implementation-Url>
+              <Implementation-Org>${project.organization.name}</Implementation-Org>
+              <Implementation-Org-Url>${project.organization.url}</Implementation-Org-Url>
+              <Implementation-Build>${buildNumber}</Implementation-Build>
+              <Build-Time>${maven.build.timestamp}</Build-Time>
+            </manifestEntries>
+          </archive>
+        </configuration>
       </plugin>
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
