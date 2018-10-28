@@ -38,6 +38,7 @@
     <node.downloadUrl>https://nodejs.org/dist/</node.downloadUrl>
     <npm.downloadUrl>https://registry.npmjs.org/npm/-/</npm.downloadUrl>
     <npm.registryUrl></npm.registryUrl>
+    <avro.allowUndefinedLogicalTypes>false</avro.allowUndefinedLogicalTypes>
   </properties>
   <distributionManagement>
         <repository>
@@ -71,6 +72,11 @@
         <artifactId>maven-avro-schema-plugin</artifactId>
         <version>${spf4j.version}</version>
         <extensions>true</extensions>
+        <configuration>
+          <systemProperties>
+            <allowUndefinedLogicalTypes>${avro.allowUndefinedLogicalTypes}</allowUndefinedLogicalTypes>
+          </systemProperties>
+        </configuration>
         <dependencies>
           <dependency>
             <groupId>org.apache.avro</groupId>
