@@ -28,11 +28,12 @@
   <parent>
     <groupId>org.spf4j.avro</groupId>
     <artifactId>avro-schema-parent</artifactId>
-    <version>1.5</version>
+    <version>1.6-SNAPSHOT</version>
   </parent>
 
   <properties>
         <scm.url>https://github.com/zolyfarkas/avro-schema-examples</scm.url>
+        <avro.allowUndefinedLogicalTypes>true</avro.allowUndefinedLogicalTypes>
   </properties>
 
   <scm>
@@ -41,20 +42,6 @@
     <url>${scm.url}</url>
     <tag>HEAD</tag>
   </scm>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.spf4j</groupId>
-        <artifactId>maven-avro-schema-plugin</artifactId>
-        <configuration>
-          <systemProperties>
-            <allowUndefinedLogicalTypes>true</allowUndefinedLogicalTypes>
-          </systemProperties>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 
   <dependencies>
     <dependency>
