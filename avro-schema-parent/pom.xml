@@ -35,6 +35,9 @@
     <scm.url>https://github.com/zolyfarkas/avro-schema-examples</scm.url>
     <scm.connection>scm:git:${scm.url}.git</scm.connection>
     <skip.avrodoc>false</skip.avrodoc>
+    <node.downloadUrl>https://nodejs.org/dist/</node.downloadUrl>
+    <npm.downloadUrl>https://registry.npmjs.org/npm/-/</npm.downloadUrl>
+    <npm.registryUrl></npm.registryUrl>
   </properties>
   <distributionManagement>
         <repository>
@@ -114,6 +117,9 @@
           </execution>
         </executions>
         <configuration>
+          <nodeDownloadRoot>${node.downloadUrl}</nodeDownloadRoot>
+          <npmDownloadRoot>${npm.downloadUrl}</npmDownloadRoot>
+          <npmRegistryURL>${npm.registryUrl}</npmRegistryURL>
           <skip>${skip.avrodoc}</skip>
           <installDirectory>${project.basedir}/target</installDirectory>
         </configuration>
