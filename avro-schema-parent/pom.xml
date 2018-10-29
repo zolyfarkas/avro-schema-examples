@@ -26,6 +26,9 @@
   <name>${project.artifactId}</name>
   <description>Avro schema project parent</description>
   <properties>
+    <java.version>1.8</java.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <spf4j.version>8.5.6</spf4j.version>
     <!-- default to my fork: https://github.com/zolyfarkas/avro/blob/trunk/README.md -->
     <avro.version>1.8.1.6p</avro.version>
@@ -116,6 +119,18 @@
             <version>${avro.version}</version>
           </dependency>
         </dependencies>
+      </plugin>
+      <plugin>
+        <groupId>>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <fork>true</fork>
+          <executable>${java.home}/bin/javac</executable>
+          <compilerVersion>${java.version}</compilerVersion>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
