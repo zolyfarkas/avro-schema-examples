@@ -39,6 +39,7 @@
     <npm.downloadUrl>https://registry.npmjs.org/npm/-/</npm.downloadUrl>
     <npm.registryUrl />
     <avro.allowUndefinedLogicalTypes>false</avro.allowUndefinedLogicalTypes>
+    <avro.deleteProtocolInterface>true</avro.deleteProtocolInterface>
   </properties>
 
     <url>${scm.url}</url>
@@ -98,6 +99,7 @@
         <version>${spf4j.version}</version>
         <extensions>true</extensions>
         <configuration>
+          <deleteProtocolInterface>${avro.deleteProtocolInterface}</deleteProtocolInterface>
           <systemProperties>
             <allowUndefinedLogicalTypes>${avro.allowUndefinedLogicalTypes}</allowUndefinedLogicalTypes>
           </systemProperties>
