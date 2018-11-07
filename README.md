@@ -2,11 +2,11 @@
 
 Showcase of using a maven repository as a Schema Repository.
 
-Show cases:
+Demonstrates:
 
   * Compose data models using maven dependency framework. Use the maven release process to release and version avro data models. (test-schema -> test-schema-common)
 
-  * Validate avro schemas ([extensile](http://www.spf4j.org/spf4j-avro-components/maven-avro-schema-plugin/avro-validate-mojo.html)). (documentation, compatibility with previously released versions)
+  * Validate avro schemas ([extensile](http://www.spf4j.org/spf4j-avro-components/maven-avro-schema-plugin/avro-validate-mojo.html)). (documentation, compatibility with previously released versions...)
 
   * Add a unique ID to the schemas (mvnId = "group:artifact:version:id")
 
