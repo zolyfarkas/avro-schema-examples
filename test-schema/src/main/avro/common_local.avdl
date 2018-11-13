@@ -9,5 +9,16 @@ protocol CommonLocal {
       union {null, string} value = null;
     }
 
+    /** key -> json record value*/
+    record KeyJsonValue {
+      /** the key */
+      string key;
+      /** the value, value can be null to allow storing everything a java String field can  */
+      @logicalType("json_record")
+      string value = "{}";
+      /** the value, value can be null to allow storing everything a java String field can  */
+      @logicalType("decimal")
+      string dv = "0";
+    }
    
 }

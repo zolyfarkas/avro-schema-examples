@@ -12,6 +12,9 @@ protocol Core {
       LocalKeyValue kv = {"key" : "la", "value" : null};
       /**  some key values */
       array<KeyValue> values = [];
+
+      /** a local date field */
+      org.spf4j.base.avro.LocalDate adate = {"year" : 1975, "monthOfYear" : 7, "dayOfMonth" : 25};
     }
 
    /** record representing a jar archive info */
