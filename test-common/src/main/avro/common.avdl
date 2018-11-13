@@ -10,5 +10,15 @@ protocol Common {
       union {null, string} value = null;
     }
 
+    /** a local date */
+    @logicalType("isodate")
+    record LocalDate {
+      /** year */
+      int year;
+      /** month of year 1 based */
+      int monthOfYear;
+      /** day of month 1 based*/
+      int dayOfMonth;
+    }
    
 }
