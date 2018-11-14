@@ -2,6 +2,8 @@
 
 Showcase of using a maven repository as a Schema Repository.
 
+Join the discussion on Gitter: [![Gitter chat](https://badges.gitter.im/zolyfarkas/spf4j-avro.png)](https://gitter.im/spf4j-avro/Lobby)
+
 Demonstrates:
 
   * Compose data models using maven dependency framework. Use the maven to re-use, version, release and publish avro data models. (test-schema -> test-schema-common)
