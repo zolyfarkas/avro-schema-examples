@@ -1,6 +1,26 @@
 @namespace("org.spf4j.base.avro")
 protocol Common {
 
+  /** ---------------
+   * blaaaaaaa
+   * ----------------
+   */
+
+  /** ---------------
+   * blaaaaaaa
+   * ----------------
+   */
+  enum QuoteIdType {
+    BLA, BLA2,
+    BLU
+  }
+
+  /** som comment */
+  record QuoteId {
+    /** some value */
+    string value;
+  }
+
     /** record representing a key value pair */
     @Immutable
     record KeyValue {
