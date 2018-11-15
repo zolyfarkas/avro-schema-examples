@@ -40,5 +40,14 @@ protocol Common {
       /** day of month 1 based*/
       int dayOfMonth;
     }
-   
+
+    /** decimal sample */
+    record TestDecimals {
+      /** one decimal */
+      @logicalType("decimal") @precision(30) @scale(12)
+      bytes dec1 = "\u0000\u0000";
+      /** second decimal */
+      @logicalType("decimal") @precision(30) @scale(12)
+      bytes dec2 = 1.2;
+    }
 }
