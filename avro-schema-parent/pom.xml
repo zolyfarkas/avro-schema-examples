@@ -21,7 +21,7 @@
 
   <groupId>org.spf4j.avro</groupId>
   <artifactId>avro-schema-parent</artifactId>
-  <version>1.12</version>
+  <version>1.13-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>${project.artifactId}</name>
   <description>Avro schema project parent</description>
@@ -91,7 +91,7 @@
     <connection>${scm.connection}</connection>
     <developerConnection>${scm.connection}</developerConnection>
     <url>${scm.url}</url>
-    <tag>avro-schema-parent-1.12</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <build>
