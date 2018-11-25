@@ -28,7 +28,7 @@
   <parent>
     <groupId>org.spf4j.avro</groupId>
     <artifactId>avro-schema-parent</artifactId>
-    <version>1.10</version>
+    <version>1.13</version>
   </parent>
 
   <properties>
@@ -47,7 +47,7 @@
     <dependency>
         <groupId>org.spf4j.avro.examples</groupId>
         <artifactId>test-schema-common</artifactId>
-        <version>1.4</version>
+        <version>1.7</version>
     </dependency>
   </dependencies>
 </project>
