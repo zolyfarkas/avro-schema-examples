@@ -22,7 +22,7 @@
   <groupId>org.spf4j.avro.examples</groupId>
   <artifactId>test-schema</artifactId>
   <packaging>jar</packaging>
-  <version>1.4</version>
+  <version>1.5-SNAPSHOT</version>
   <name>${project.artifactId}-${project.version}</name>
   <description>Avro schema example</description>
   <parent>
