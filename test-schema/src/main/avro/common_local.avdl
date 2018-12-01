@@ -18,7 +18,7 @@ protocol CommonLocal {
       string value = "{}";
       /** the value, value can be null to allow storing everything a java String field can  */
       @logicalType("decimal")
-      string dv = "0";
+      string @aliases(["dv"]) decimalValue = "0";
     }
    
 }

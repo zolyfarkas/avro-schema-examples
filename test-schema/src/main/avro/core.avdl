@@ -9,7 +9,7 @@ protocol Core {
    /** record representing a jar archive info */
     record TestRecord {
       /** some key value for test*/
-      LocalKeyValue kv = {"key" : "la", "value" : null};
+      LocalKeyValue @aliases(["kv"]) keyValue = {"key" : "la", "value" : null};
       /**  some key values */
       array<KeyValue> values = [];
 
