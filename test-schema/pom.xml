@@ -47,7 +47,7 @@
     <dependency>
         <groupId>org.spf4j.avro.examples</groupId>
         <artifactId>test-schema-common</artifactId>
-        <version>1.9-SNAPSHOT</version>
+        <version>1.8</version>
     </dependency>
   </dependencies>
 </project>
