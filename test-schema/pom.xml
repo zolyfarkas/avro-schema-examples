@@ -27,8 +27,8 @@
   <description>Avro schema example</description>
   <parent>
     <groupId>org.spf4j.avro</groupId>
-    <artifactId>avro-schema-parent</artifactId>
-    <version>1.14-SNAPSHOT</version>
+    <artifactId>schema-parent-pom</artifactId>
+    <version>0.4</version>
   </parent>
 
   <properties>
