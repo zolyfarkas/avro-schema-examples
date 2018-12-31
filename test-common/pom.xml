@@ -27,8 +27,8 @@
   <description>An example schema project</description>
   <parent>
     <groupId>org.spf4j.avro</groupId>
-    <artifactId>avro-schema-parent</artifactId>
-    <version>1.14-SNAPSHOT</version>
+    <artifactId>schema-parent-pom</artifactId>
+    <version>0.4</version>
   </parent>
 
   <properties>
@@ -41,5 +41,13 @@
     <url>${scm.url}</url>
     <tag>HEAD</tag>
   </scm>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.avro</groupId>
+      <artifactId>avro-joda-ext</artifactId>
+      <version>${avro.version}</version>
+    </dependency>
+  </dependencies>
 
 </project>
