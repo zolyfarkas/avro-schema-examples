@@ -28,12 +28,13 @@
   <parent>
     <groupId>org.spf4j.avro</groupId>
     <artifactId>schema-parent-pom</artifactId>
-    <version>0.4</version>
+    <version>0.11</version>
   </parent>
 
   <properties>
         <scm.url>https://github.com/zolyfarkas/avro-schema-examples</scm.url>
         <avro.allowUndefinedLogicalTypes>false</avro.allowUndefinedLogicalTypes>
+        <spf4j.version>8.6.1-SNAPSHOT</spf4j.version>
   </properties>
 
   <scm>
@@ -47,7 +48,23 @@
     <dependency>
         <groupId>org.spf4j.avro.examples</groupId>
         <artifactId>test-schema-common</artifactId>
-        <version>1.8</version>
+        <version>1.9-SNAPSHOT</version>
     </dependency>
   </dependencies>
+
+  <build>
+    <plugins>
+        <plugin>
+          <groupId>org.spf4j</groupId>
+          <artifactId>maven-avro-schema-plugin</artifactId>
+          <dependencies>
+            <dependency>
+              <groupId>org.apache.avro</groupId>
+              <artifactId>avro-joda-ext</artifactId>
+              <version>${avro.version}</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+    </plugins>
+  </build>
 </project>

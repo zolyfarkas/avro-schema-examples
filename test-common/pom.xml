@@ -28,7 +28,7 @@
   <parent>
     <groupId>org.spf4j.avro</groupId>
     <artifactId>schema-parent-pom</artifactId>
-    <version>0.4</version>
+    <version>0.11</version>
   </parent>
 
   <properties>
@@ -42,8 +42,23 @@
     <tag>HEAD</tag>
   </scm>
 
+  <build>
+    <plugins>
+        <plugin>
+          <groupId>org.spf4j</groupId>
+          <artifactId>maven-avro-schema-plugin</artifactId>
+          <dependencies>
+            <dependency>
+              <groupId>org.apache.avro</groupId>
+              <artifactId>avro-joda-ext</artifactId>
+              <version>${avro.version}</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+    </plugins>
+  </build>
   <dependencies>
-    <dependency>
+     <dependency>
       <groupId>org.apache.avro</groupId>
       <artifactId>avro-joda-ext</artifactId>
       <version>${avro.version}</version>
