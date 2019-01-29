@@ -31,20 +31,20 @@ The pom file for a schema project is as simple as (see example from this repo fo
       <version>1.5-SNAPSHOT</version>
       <name>${project.artifactId}-${project.version}</name>
       <description>Avro schema example</description>
-      <parent>
-        <groupId>org.spf4j.avro</groupId>
-        <artifactId>avro-schema-parent</artifactId>
-        <version>1.11</version>
-      </parent>
+       <parent>
+         <groupId>org.spf4j.avro</groupId>
+         <artifactId>schema-parent-pom</artifactId>
+         <version>LATEST</version>
+       </parent>
       <properties>
-            <avro.version>1.8.1.25p</avro.version> <!-- change to use your own fork or official -->
+            <avro.version>LATEST</avro.version> <!-- change to use your own fork or official -->
             <avro.allowUndefinedLogicalTypes>false</avro.allowUndefinedLogicalTypes>
       </properties>
       <dependencies>
         <dependency> <!-- this schema will re-use schema's from this dependency -->
             <groupId>org.spf4j.avro.examples</groupId>
             <artifactId>test-schema-common</artifactId>
-            <version>1.5</version>
+            <version>LATEST</version>
         </dependency>
       </dependencies>
     </project>
