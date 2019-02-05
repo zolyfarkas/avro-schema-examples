@@ -4,6 +4,14 @@ Showcase of using a maven repository as a Schema Repository.
 
 Join the discussion on Gitter: [![Gitter chat](https://badges.gitter.im/zolyfarkas/spf4j-avro.png)](https://gitter.im/spf4j-avro/Lobby)
 
+The examples here are built and published to:
+
+  * schema parent: [ ![Download](https://api.bintray.com/packages/zolyfarkas/core/schema-parent-pom/images/download.svg) ](https://bintray.com/zolyfarkas/core/schema-parent-pom/_latestVersion)
+  
+  * test schema common: [ ![Download](https://api.bintray.com/packages/zolyfarkas/core/test-schema-common/images/download.svg) ](https://bintray.com/zolyfarkas/core/test-schema-common/_latestVersion)
+  
+  * test schema: [ ![Download](https://api.bintray.com/packages/zolyfarkas/core/test-schema/images/download.svg) ](https://bintray.com/zolyfarkas/core/test-schema/_latestVersion)  
+
 Demonstrates:
 
   * Compose data models using maven dependency framework. Use the maven to re-use, version, release and publish avro data models. (test-schema -> test-schema-common)
@@ -18,13 +26,6 @@ Demonstrates:
   
   * Generate and publish avrodoc, [see](https://bintray.com/zolyfarkas/core/download_file?file_path=org%2Fspf4j%2Favro%2Fexamples%2Ftest-schema%2F1.1%2Ftest-schema-1.1-avrodoc.jar).
   
-The examples here are built and published to:
-
-  * schema parent: [ ![Download](https://api.bintray.com/packages/zolyfarkas/core/schema-parent-pom/images/download.svg) ](https://bintray.com/zolyfarkas/core/schema-parent-pom/_latestVersion)
-  
-  * test schema common: [ ![Download](https://api.bintray.com/packages/zolyfarkas/core/test-schema-common/images/download.svg) ](https://bintray.com/zolyfarkas/core/test-schema-common/_latestVersion)
-  
-  * test schema: [ ![Download](https://api.bintray.com/packages/zolyfarkas/core/test-schema/images/download.svg) ](https://bintray.com/zolyfarkas/core/test-schema/_latestVersion)  
 
 The pom file for a schema project is as simple as (see example from this repo for more detail):
 
