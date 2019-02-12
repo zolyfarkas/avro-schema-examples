@@ -24,8 +24,11 @@ Demonstrates:
 
   * Generate package and publish the avro schemas, [see](https://bintray.com/zolyfarkas/core/download_file?file_path=org%2Fspf4j%2Favro%2Fexamples%2Ftest-schema%2F1.1%2Ftest-schema-1.1-avsc.jar).
   
-  * Generate and publish avrodoc, [see](https://bintray.com/zolyfarkas/core/download_file?file_path=org%2Fspf4j%2Favro%2Fexamples%2Ftest-schema%2F1.1%2Ftest-schema-1.1-avrodoc.jar).
+  * Generate and publish avrodoc to [maven repo](https://bintray.com/zolyfarkas/core/download_file?file_path=org%2Fspf4j%2Favro%2Fexamples%2Ftest-schema%2F1.1%2Ftest-schema-1.1-avrodoc.jar) or [gh-pages](https://zolyfarkas.github.io/fred-schema).
   
+More schema project examples:
+https://github.com/zolyfarkas/core-schema , https://github.com/zolyfarkas/fred-schema
+
 
 The pom file for a schema project is as simple as (see example from this repo for more detail):
 
