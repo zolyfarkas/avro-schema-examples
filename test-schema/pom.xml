@@ -28,12 +28,13 @@
   <parent>
     <groupId>org.spf4j.avro</groupId>
     <artifactId>schema-parent-pom</artifactId>
-    <version>0.11</version>
+    <version>0.19-SNAPSHOT</version>
   </parent>
 
   <properties>
         <scm.url>https://github.com/zolyfarkas/avro-schema-examples</scm.url>
         <avro.allowUndefinedLogicalTypes>false</avro.allowUndefinedLogicalTypes>
+        <avro.useSchemaReferencesForAvsc>true</avro.useSchemaReferencesForAvsc>
   </properties>
 
   <scm>
