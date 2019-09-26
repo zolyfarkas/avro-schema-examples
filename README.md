@@ -6,7 +6,7 @@ Join the discussion on Gitter: [![Gitter chat](https://badges.gitter.im/zolyfark
 
 The examples here are built and published to:
 
-  * schema parent: [ ![Download](https://api.bintray.com/packages/zolyfarkas/core/schema-parent-pom/images/download.svg) ](https://bintray.com/zolyfarkas/core/schema-parent-pom/_latestVersion)
+  * [schema parent](https://github.com/zolyfarkas/schema-parent-pom): [ ![Download](https://api.bintray.com/packages/zolyfarkas/core/schema-parent-pom/images/download.svg) ](https://bintray.com/zolyfarkas/core/schema-parent-pom/_latestVersion)
   
   * test schema common: [ ![Download](https://api.bintray.com/packages/zolyfarkas/core/test-schema-common/images/download.svg) ](https://bintray.com/zolyfarkas/core/test-schema-common/_latestVersion)
   
