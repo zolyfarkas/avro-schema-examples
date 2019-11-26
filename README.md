@@ -16,7 +16,7 @@ Demonstrates:
 
   * Compose data models using maven dependency framework. Leverage maven to compose and re-use, version, release and publish avro data models. (see: test-schema depend-on test-schema-common)
 
-  * Validate avro schemas ([extensile](http://www.spf4j.org/spf4j-avro-components/maven-avro-schema-plugin/avro-validate-mojo.html)). (documentation, compatibility with previously released versions...)
+  * Validate avro schemas ([extensile](http://www.spf4j.org/spf4j-avro-components/maven-avro-schema-plugin/avro-validate-mojo.html)). (documentation, compatibility with previously released versions, deprecation prrior to removal)
 
   * Add a unique ID to the schemas (mvnId = "group:artifact:version:id")
 
