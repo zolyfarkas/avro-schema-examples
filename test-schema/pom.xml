@@ -28,7 +28,7 @@
   <parent>
     <groupId>org.spf4j.avro</groupId>
     <artifactId>schema-parent-pom</artifactId>
-    <version>0.19-SNAPSHOT</version>
+    <version>0.25</version>
   </parent>
 
   <properties>
@@ -41,14 +41,13 @@
     <connection>${scm.connection}</connection>
     <developerConnection>${scm.connection}</developerConnection>
     <url>${scm.url}</url>
-    <tag>test-schema-1.4</tag>
   </scm>
 
   <dependencies>
     <dependency>
         <groupId>org.spf4j.avro.examples</groupId>
         <artifactId>test-schema-common</artifactId>
-        <version>1.9</version>
+        <version>1.11</version>
     </dependency>
   </dependencies>
 
