@@ -1,0 +1,22 @@
+{
+	"type": "record",
+	"name": "KeyValue",
+	"namespace": "com.foo.message.v1",
+	"doc": "The key value type.",
+	"fields": [
+		{
+			"name": "key",
+			"type": "string",
+			"doc": "The key string, must not be null."
+		},
+		{
+			"name": "value",
+			"type": [
+				"null",
+				"string"
+			],
+			"doc": "The value string, value can be null.",
+			"default": null
+		}
+	]
+}

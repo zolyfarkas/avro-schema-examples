@@ -1,0 +1,13 @@
+@namespace("org.spf4j.base.avro.p1")
+protocol P1 {
+
+    /** record representing a key value pair */
+    @Immutable
+    record KeyValueP1{
+      /** the key */
+      string key;
+      /** the value, value can be null to allow storing everything a java String field can  */
+      union {null, string} value = null;
+    }
+
+}

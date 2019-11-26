@@ -1,0 +1,4 @@
+/test-common/target/
+/test-schema/target/
+/test-common/nb-configuration.xml
+/test-schema/nb-configuration.xml
