@@ -34,7 +34,7 @@
   <properties>
         <scm.url>https://github.com/zolyfarkas/avro-schema-examples</scm.url>
         <avro.allowUndefinedLogicalTypes>false</avro.allowUndefinedLogicalTypes>
-        <avro.useSchemaReferencesForAvsc>true</avro.useSchemaReferencesForAvsc>
+        <avro.useSchemaReferencesForAvsc>false</avro.useSchemaReferencesForAvsc> <!-- experimental, needs fixes for enabling-->
   </properties>
 
   <scm>
