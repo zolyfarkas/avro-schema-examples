@@ -31,14 +31,14 @@ protocol Common {
     }
 
     /** a local date */
-    @logicalType("isodate")
+    @logicalType("date")
     record LocalDate {
       /** year */
       int year;
       /** month of year 1 based */
-      int monthOfYear;
+      int month;
       /** day of month 1 based*/
-      int dayOfMonth;
+      int day;
     }
 
     /** decimal sample */

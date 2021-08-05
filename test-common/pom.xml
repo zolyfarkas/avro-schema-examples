@@ -34,6 +34,7 @@
   <properties>
         <scm.url>https://github.com/zolyfarkas/avro-schema-examples</scm.url>
         <scm-publish.scmBranch>gh-pages-common</scm-publish.scmBranch>
+        <avro.version>1.10.0.2p-SNAPSHOT</avro.version>
   </properties>
 
   <scm>
