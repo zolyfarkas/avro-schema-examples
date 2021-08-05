@@ -14,7 +14,7 @@ protocol Core {
       array<KeyValue> values = [];
 
       /** a local date field */
-      org.spf4j.base.avro.LocalDate adate = {"year" : 1975, "monthOfYear" : 7, "dayOfMonth" : 25};
+      org.spf4j.base.avro.LocalDate adate = {"year" : 1975, "month" : 7, "day" : 25};
     }
 
    /** record representing a jar archive info */
